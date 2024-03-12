@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <input type="button" target="_blank" value="search" onclick="search()" id="b1" />
+
+    <script>
+
+        var a = [
+            "Albert Einstein",
+            "Leonardo da Vinci",
+            "William Shakespeare",
+            "Nelson Mandela",
+            "Mahatma Gandhi",
+            "Martin Luther King Jr.",
+            "Mother Teresa",
+            "Pablo Picasso",
+            "Marie Curie",
+            "Charles Darwin",
+            "Winston Churchill",
+            "Oprah Winfrey",
+            "Steve Jobs",
+            "Elon Musk",
+            "Stephen Hawking",
+            "Jane Austen",
+            "Abraham Lincoln",
+            "Marilyn Monroe",
+            "John F. Kennedy",
+            "Queen Elizabeth II",
+            "Frida Kahlo",
+            "Vincent van Gogh",
+            "Helen Keller",
+            "J.K. Rowling",
+            "Walt Disney",
+            "Bill Gates",
+            "Amelia Earhart",
+            "Muhammad Ali",
+            "Pope Francis",
+            "Alberto Einstein",
+            "Elvis Presley",
+            "Beyoncé",
+            "Malala Yousafzai",
+            "Napoleon Bonaparte",
+            "Mao Zedong",
+            "Rosa Parks",
+            "Leon Trotsky",
+            "George Washington",
+            "Pierre Curie",
+            "Harriet Tubman",
+            "Fidel Castro",
+        ]
+        $(document).ready(function () {
+            $("#b1").click(function () {
+
+                a.forEach(v => {
+                    // $("#b1").attr("href", "")
+                    console.log(v);
+                    search();
+                });
+            });
+            
+            function search() {
+                document.open("https://www.bing.com/search?pglt=161&q=" + v + "&cvid=ebc81c4ce9b049799f08e591e5ee4f7d&aqs=edge.0.0l4.10846j0j1&FORM=ANNTA1&PC=ASTS")
+            }
+        });
+
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <input type="button" value="Search" onclick="search()" id="b1" />
+
+    <script>
+        var a = [
+            "Albert Einstein",
+            "Leonardo da Vinci",
+            // ... (other names)
+        ];
+
+        function search() {
+            a.forEach(function (name) {
+                // Encode the name for a URL
+                var encodedName = encodeURIComponent(name);
+                // Open Bing search results for the name
+                window.open("https://www.bing.com/search?q=" + encodedName);
+            });
+        }
+    </script>
+</body>
+
+</html>
